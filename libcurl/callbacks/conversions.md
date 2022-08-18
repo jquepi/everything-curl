@@ -8,6 +8,7 @@ The documentation below is kept here for a while and describes how they used
 to work. It will be removed from this book at a future date.
 
 ## Convert to and from network callbacks
+# Convert to and from network callbacks
 
 For non-ASCII platforms, `CURLOPT_CONV_FROM_NETWORK_FUNCTION` is
 provided. This function should convert **to** host encoding **from** the
