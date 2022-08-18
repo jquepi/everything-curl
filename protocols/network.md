@@ -60,9 +60,9 @@ With a list of IP addresses for the host curl wants to contact, curl sends out
 a "connect request". The connection curl wants to establish is called TCP
 ([Transmission Control
 Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)) or
-[QUIC](https://en.wikipedia.org/wiki/QUIC) connection and they work similar to
-connecting an invisible string between two computers. Once established, the
-string can be used to send a stream of data in both directions.
+[QUIC](https://en.wikipedia.org/wiki/QUIC) and they work similar to connecting
+an invisible string between two computers. Once established, the string can be
+used to send a stream of data in both directions.
 
 If the client has received more than one address for the host, it will
 traverse that list of addresses when connecting and in case one of fails it
@@ -79,15 +79,6 @@ on other port numbers at the same time.
 Most common protocols have default port numbers that clients and servers
 use. For example, when using the `http://example.com/index.html` URL, that URL
 specifies a *scheme* called `HTTP` which tells the client that it should try
-TCP port number 80 on the server by default. If the URL uses `HTTPS` instead,
-the default port number is 443.
-
-The URL can optionally provide another, custom, port number but if nothing
-special is specified, it will use the default port for the scheme used in the
-URL.
-
-## Security
-
 TCP port number 80 on the server by default. If you go with `HTTPS` instead,
 the default port number is 443.
 
@@ -95,7 +86,7 @@ The URL can optionally provide another, custom, port number but if nothing
 special is specified, it will use the default port for the scheme used in the
 URL.
 
-## Security
+### Security
 
 After a TCP connection has been established, many transfers will require that
 both sides negotiate a better security level before continuing (if for example
@@ -105,12 +96,14 @@ used, the client and server will do a TLS handshake first and only continue
 further if that succeeds.
 
 If the connection is done using QUIC, the TLS handshake is done automatically
-in the connect phase.
+in connect phase.
 
-If the connection is done using QUIC, the TLS handshake is done automatically
-in the connect phase.
-
-## Transfer data
+After a TCP connection has been established, many transfers will require that
+both sides negotiate a better security level before continuing (if for example
+`HTTPS` is used), done with TLS; [Transport Layer
+Security](https://en.wikipedia.org/wiki/Transport_Layer_Security). If that is
+used, the client and server will do a TLS handshake first and only continue
+further if that succeeds.
 
 When the connected metaphorical "string" is attached to the remote computer,
 there is an established *connection* between the two machines and this
