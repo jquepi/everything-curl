@@ -48,16 +48,9 @@ exist.
 
 ## Establish a connection
 
-With a list of IP addresses for the host curl wants to contact, curl sends out
-a "connect request". The connection curl wants to establish is called TCP
-([Transmission Control
-Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)) or
-[QUIC](https://en.wikipedia.org/wiki/QUIC) connection and they work similar to
-connecting an invisible string between two computers. Once established, the
-string can be used to send a stream of data in both directions.
-With a list of IP addresses for the host curl wants to contact, curl sends out
-a "connect request". The connection curl wants to establish is called TCP
-([Transmission Control
+With one or more IP addresses for the host the client wants to contact, it
+sends a "connect request". The connection it wants to establish is called a
+TCP ([Transmission Control
 Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)) or
 [QUIC](https://en.wikipedia.org/wiki/QUIC) connection and they work similar to
 connecting an invisible string between two computers. Once established, the
@@ -78,7 +71,7 @@ on other port numbers at the same time.
 Most common protocols have default port numbers that clients and servers
 use. For example, when using the `http://example.com/index.html` URL, that URL
 specifies a *scheme* called `HTTP` which tells the client that it should try
-TCP port number 80 on the server by default. If you go with `HTTPS` instead,
+TCP port number 80 on the server by default. If the URL uses `HTTPS` instead,
 the default port number is 443.
 
 The URL can optionally provide another, custom, port number but if nothing
