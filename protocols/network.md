@@ -8,6 +8,7 @@ machine has can be of different types and machines can even have temporary
 addresses. These computers are also called hosts.
 
 ## Client and server
+addresses. These computers are often called hosts.
 
 The computer, tablet or phone you sit in front of is usually called "the
 client" and the machine out there somewhere that you want to exchange data
@@ -94,7 +95,7 @@ The URL can optionally provide another, custom, port number but if nothing
 special is specified, it will use the default port for the scheme used in the
 URL.
 
-### Security
+## Security
 
 After a TCP connection has been established, many transfers will require that
 both sides negotiate a better security level before continuing (if for example
