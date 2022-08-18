@@ -5,7 +5,9 @@ Internet is just a bunch of interconnected machines (computers really), each
 using its own individual addresses (called [IP
 addresses](https://en.wikipedia.org/wiki/IP_address)). The addresses each
 machine has can be of different types and machines can even have temporary
-addresses. These computers are often called hosts.
+addresses. These computers are also called hosts.
+
+## Client and server
 
 The computer, tablet or phone you sit in front of is usually called "the
 client" and the machine out there somewhere that you want to exchange data
@@ -57,9 +59,9 @@ With a list of IP addresses for the host curl wants to contact, curl sends out
 a "connect request". The connection curl wants to establish is called TCP
 ([Transmission Control
 Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)) or
-[QUIC](https://en.wikipedia.org/wiki/QUIC) and they work similar to connecting
-an invisible string between two computers. Once established, the string can be
-used to send a stream of data in both directions.
+[QUIC](https://en.wikipedia.org/wiki/QUIC) connection and they work similar to
+connecting an invisible string between two computers. Once established, the
+string can be used to send a stream of data in both directions.
 
 If the client has received more than one address for the host, it will
 traverse that list of addresses when connecting and in case one of fails it
@@ -76,7 +78,7 @@ on other port numbers at the same time.
 Most common protocols have default port numbers that clients and servers
 use. For example, when using the `http://example.com/index.html` URL, that URL
 specifies a *scheme* called `HTTP` which tells the client that it should try
-TCP port number 80 on the server by default. If you go with `HTTPS` instead,
+TCP port number 80 on the server by default. If the URL uses `HTTPS` instead,
 the default port number is 443.
 
 The URL can optionally provide another, custom, port number but if nothing
