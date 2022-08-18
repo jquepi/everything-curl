@@ -85,7 +85,7 @@ The URL can optionally provide another, custom, port number but if nothing
 special is specified, it will use the default port for the scheme used in the
 URL.
 
-### Security
+## Security
 
 After a TCP connection has been established, many transfers will require that
 both sides negotiate a better security level before continuing (if for example
