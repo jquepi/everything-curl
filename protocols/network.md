@@ -5,9 +5,6 @@ Internet is just a bunch of interconnected machines (computers really), each
 using its own individual addresses (called [IP
 addresses](https://en.wikipedia.org/wiki/IP_address)). The addresses each
 machine has can be of different types and machines can even have temporary
-addresses. These computers are also called hosts.
-
-## Client and server
 addresses. These computers are often called hosts.
 
 The computer, tablet or phone you sit in front of is usually called "the
@@ -86,7 +83,7 @@ The URL can optionally provide another, custom, port number but if nothing
 special is specified, it will use the default port for the scheme used in the
 URL.
 
-### Security
+## Security
 
 After a TCP connection has been established, many transfers will require that
 both sides negotiate a better security level before continuing (if for example
@@ -98,12 +95,7 @@ further if that succeeds.
 If the connection is done using QUIC, the TLS handshake is done automatically
 in connect phase.
 
-After a TCP connection has been established, many transfers will require that
-both sides negotiate a better security level before continuing (if for example
-`HTTPS` is used), done with TLS; [Transport Layer
-Security](https://en.wikipedia.org/wiki/Transport_Layer_Security). If that is
-used, the client and server will do a TLS handshake first and only continue
-further if that succeeds.
+## Transfer data
 
 When the connected metaphorical "string" is attached to the remote computer,
 there is an established *connection* between the two machines and this
